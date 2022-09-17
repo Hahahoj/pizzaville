@@ -1,0 +1,32 @@
+.Row-markup {
+    padding: 0px 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 146px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+p {
+    margin:0 0; 
+    font-weight: 500;
+    font-size: 17px;
+    text-align: right;
+    color: #FFFFFF;
+    text-transform: lowercase;
+}
+
+.Right-block-markup {
+    display:flex;
+}
+
+.Order-icon {
+    margin-left: 20px; 
+}
