@@ -1,0 +1,59 @@
+.Card {
+    width: 312px;
+    height: 552px;
+    border: 1px solid #D58C51;
+    position: relative;
+}
+
+.CardImage {
+    width: 270px;
+    height: 270px;
+    padding: 43px 20px 30px 20px;
+}
+
+h2.CardTitle {    
+    text-align:left;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0 0 13px 0;
+    padding: 0 22px 0 22px;
+}
+
+p.CardDescription {
+    text-align:left ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF; 
+    padding: 0 22px 0 22px;
+}
+
+.CardProperties {
+    position: absolute;
+    bottom: 30px;
+    left: 22px;
+    display: flex;
+}
+
+.CardPrice {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.CardWeight {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.CardIcon {
+    position:absolute;
+    bottom: -8px; 
+    left: 234px;
+}
+

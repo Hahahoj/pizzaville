@@ -1,10 +1,10 @@
-import icon from "./Images/Header/icon.svg";
+import icon from "../Images/Header/icon.svg";
 import React from 'react'
 
 
 export default function Header(props) {
     return (
-        <div className="Row-markup">
+        <header className="Row-markup">
             <div>
                 <h1 className="Page-title">Наша продукция</h1>
             </div>
@@ -15,8 +15,7 @@ export default function Header(props) {
                 </div>
                 <img src={icon} className="Order-icon" alt="order" />
             </div>
-            {/* <img src={logo} className="App-logo" alt="logo" />*/}
-        </div> 
+        </header> 
     )
 }
 

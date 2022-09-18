@@ -1,0 +1,6 @@
+.Cards-ROW {
+    display:flex;
+    justify-content: space-between;
+    padding: 10px 70px; 
+    /* height: calc(100vh – 146px);*/
+}
