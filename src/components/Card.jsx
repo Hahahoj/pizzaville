@@ -17,7 +17,8 @@ function Card(props) {
                     <span className="CardPrice">{props.cardPrice} р. / </span>
                     <span className="CardWeight">{cardWeightConverted}</span>
                 </div>
-                <div className="CardIcon"><img src="../Images/Menu/icon__add.svg" alt="Иконка добавления" /></div>
+                <div className="CardButton">
+                </div>
             </div>
         </div>
     );

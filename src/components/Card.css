@@ -3,7 +3,16 @@
     height: 552px;
     border: 1px solid #D58C51;
     position: relative;
+    color: #FFFFFF;
 }
+
+.Card:hover {
+    color: #D58C51;
+}  
+
+.CardButton:hover {
+    background-image: url("../Images/Menu/icon__add_hover.svg");
+} 
 
 .CardImage {
     width: 270px;
@@ -16,7 +25,7 @@ h2.CardTitle {
     font-weight: 500;
     font-size: 17px;
     line-height: 21px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     margin: 0 0 13px 0;
     padding: 0 22px 0 22px;
 }
@@ -26,7 +35,7 @@ p.CardDescription {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #FFFFFF; 
+    /* color: #FFFFFF;  */
     padding: 0 22px 0 22px;
 }
 
@@ -41,19 +50,24 @@ p.CardDescription {
     font-weight: 500;
     font-size: 17px;
     line-height: 21px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
 }
 
 .CardWeight {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
 }
 
-.CardIcon {
+.CardButton {
     position:absolute;
     bottom: -8px; 
-    left: 234px;
+    left: 234px; 
+    background-image: url("../Images/Menu/icon__add.svg");
+    background-repeat: no-repeat;
+    width:31px;
+    height:31px;
 }
+
 

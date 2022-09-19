@@ -1,6 +1,18 @@
 .Cards-ROW {
     display:flex;
     justify-content: space-between;
-    padding: 10px 70px; 
-    /* height: calc(100vh – 146px);*/
+    padding: 18px 60px; 
+}
+
+.Cards {
+    position:absolute; 
+    padding-bottom: 40px;
+    top:146px; 
+    /* height: calc(100vh – 146px); */
+    bottom:0px; 
+    left:calc (100vw - 1440)/2; 
+    right:calc (100vw - 1440)/2; 
+    width: 1440px;
+    margin:0 auto;
+    overflow-y: scroll;
 }
