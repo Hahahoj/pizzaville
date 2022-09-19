@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css"
 
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 

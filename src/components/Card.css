@@ -68,6 +68,7 @@ p.CardDescription {
     background-repeat: no-repeat;
     width:31px;
     height:31px;
+    cursor:pointer;
 }
 
 
