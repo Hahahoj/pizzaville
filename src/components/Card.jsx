@@ -8,7 +8,9 @@ function Card(props) {
     if (isNumber(props.cardWeight)) {
         cardWeightConverted = cardWeightConverted + "г.";
     };
+
     return (
+        
         <div className="Card">
             <img className="CardImage" src={props.cardImage} alt="Изображение товара" />
             <h2 className="CardTitle">{props.cardTitle}</h2>
@@ -22,6 +24,7 @@ function Card(props) {
                 </div>
             </div>
         </div>
+        
     );
 }
 

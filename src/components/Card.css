@@ -1,14 +1,13 @@
 .Card {
-    width: 312px;
-    height: 552px;
     border: 1px solid #D58C51;
     position: relative;
     color: #FFFFFF;
+    margin: 15px 0;
 }
 
 .Card:hover {
     color: #D58C51;
-}  
+}
 
 .CardButton:hover {
     background-image: url("../Images/Menu/icon__add_hover.svg");

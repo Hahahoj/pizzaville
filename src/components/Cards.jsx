@@ -4,8 +4,8 @@ import "./Cards.css"
 
 function Cards(props) {
     return (
-        <div className="Cards">
-            <div className="Cards-ROW">
+        <main>
+            <div className="Cards">
                 <Card 
                     cardID="1"
                     cardChoosen="false"
@@ -45,10 +45,7 @@ function Cards(props) {
                     cardPrice="2700"
                     cardWeight="500"
                 />
-
-            </div>
-
-            <div className="Cards-ROW">
+                
                 <Card 
                     cardID="5"
                     cardChoosen="false"
@@ -89,7 +86,7 @@ function Cards(props) {
                     cardWeight="500"
                 />
             </div>
-        </div>
+        </main>
     );
 }
 

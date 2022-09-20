@@ -1,10 +1,5 @@
 .Row-markup {
-    width: 1284px;
     height: 146px;
-    margin: 0 auto;;
-    position:absolute; 
-    top:0px; 
-    overflow:hidden;
     padding: 0px 70px;
     display:flex;
     justify-content: space-between;
