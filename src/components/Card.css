@@ -70,4 +70,7 @@ p.CardDescription {
     cursor:pointer;
 }
 
+.Card:last-child {
+    margin-bottom: 87px;
+}
 
