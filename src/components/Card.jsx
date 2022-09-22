@@ -8,11 +8,12 @@ function Card(props) {
     if (isNumber(props.cardWeight)) {
         cardWeightConverted = cardWeightConverted + "г.";
     };
+    let cardURLConverted = "../Images/Menu/" + props.cardImage;
 
     return (
         
         <div className="Card">
-            <img className="CardImage" src={props.cardImage} alt="Изображение товара" />
+            <img className="CardImage" src={cardURLConverted} alt="Изображение товара" />
             <h2 className="CardTitle">{props.cardTitle}</h2>
             <p className="CardDescription">{props.cardDescription}</p>
             <div className="CardProperties">
