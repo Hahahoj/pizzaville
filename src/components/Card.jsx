@@ -6,7 +6,7 @@ function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
 function Card(props) {
     let cardWeightConverted = props.cardWeight;
     if (isNumber(props.cardWeight)) {
-        cardWeightConverted = cardWeightConverted + "г.";
+        cardWeightConverted = cardWeightConverted + " г.";
     };
     let cardURLConverted = "../Images/Menu/" + props.cardImage;
 

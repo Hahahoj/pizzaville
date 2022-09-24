@@ -1,0 +1,42 @@
+.basketCard {
+    display: flex;
+    margin: 0px 290px 39px;
+    align-items: center;
+}
+
+.bCardImage {
+    width: 122px;
+    height: 122px;
+    margin-right: 98px;
+}
+
+.bCardTitle {
+    width: 310px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-right: 218px;
+    flex-wrap: nowrap;
+}
+
+.bCardPrice {
+    font-weight: 400;   
+    font-size: 18px;
+    width: 69px;
+    line-height: 22px;
+    color: #D58C51;
+    margin-right: 15px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.bCardButton {
+    cursor:pointer;
+    background-image: url("../Images/Basket/icon__delete.svg");
+    border-width: 0px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
