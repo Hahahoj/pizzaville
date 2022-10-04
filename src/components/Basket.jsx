@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Basket.css"
 import {products} from "../menuList"
 import BasketCard from "./BasketCard"

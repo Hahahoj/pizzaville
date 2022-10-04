@@ -1,15 +1,20 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import App2 from './App2';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProductsPage from './Pages/ProductsPage';
+import BasketPage from './Pages/BasketPage';
+import NotFound from "./Pages/NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* Домашние задания до 23.09.2022 */}
-    <App />
-    {/* Домашнее задание от 23.09.2022
-    <App2 /> */}
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<ProductsPage />} /> 
+          <Route path="/basket" element = {<BasketPage />} /> 
+          <Route path="*" element = {<NotFound />} /> 
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );

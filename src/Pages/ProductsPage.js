@@ -1,8 +1,8 @@
-import './App.css';
-import Header from "./components/Header";
-import Cards from "./components/Cards";
+import './ProductsPage.css';
+import Header from "../components/Header";
+import Cards from "../components/Cards";
 
-function App() {
+export default function ProductsPage() {
   return (
     <div className="App">
       <div className="container">
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

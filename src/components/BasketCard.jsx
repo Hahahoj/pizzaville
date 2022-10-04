@@ -1,4 +1,3 @@
-import React from "react";
 import "./BasketCard.css";
 
 export default function BasketCard(props) {

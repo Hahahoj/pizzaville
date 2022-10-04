@@ -1,7 +1,6 @@
-import React from "react";
-import Card from "./Card";
 import "./Cards.css"
 import { products } from "../menuList";
+import Card from "./Card";
 
 function Cards(props) {
     return (

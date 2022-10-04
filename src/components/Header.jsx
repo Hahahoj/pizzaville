@@ -1,7 +1,6 @@
-import icon from "../Images/Header/icon.svg";
-import React from "react";
 import "./Header.css"
-
+import icon from "../Images/Header/icon.svg";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
     return (
@@ -14,8 +13,10 @@ export default function Header(props) {
                     <p>{props.orderItems} товара</p>
                     <p>На сумму: {props.orderPrice} р.</p>
                 </div>
-                <img src={icon} className="Order-icon" alt="order" />
-            </div>
+                <Link to="/basket">
+                    <img src={icon} className="Order-icon" alt="order" />
+                </Link>
+            </div>  
         </header> 
     )
 }

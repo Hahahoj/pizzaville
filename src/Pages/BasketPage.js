@@ -1,9 +1,9 @@
-import './App2.css';
-import BasketHeader from "./components/BasketHeader";
-import Basket from "./components/Basket";
-import BasketFooter from './components/BasketFooter';
+import './BasketPage.css';
+import BasketHeader from "../components/BasketHeader";
+import Basket from "../components/Basket";
+import BasketFooter from '../components/BasketFooter';
 
-export default function App2() {
+export default function BasketPage() {
     return (
         <div className="App2">
             <div className="container2">

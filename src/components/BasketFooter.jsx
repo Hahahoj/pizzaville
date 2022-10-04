@@ -1,4 +1,3 @@
-import React from 'react'
 import "./BasketFooter.css"
 
 export default function BasketFooter(props) {
