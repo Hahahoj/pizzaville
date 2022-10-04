@@ -2,7 +2,7 @@ import "./Cards.css"
 import { products } from "../menuList";
 import Card from "./Card";
 
-function Cards(props) {
+export default function Cards(props) {
     return (
         <main className="Cards">
             {
@@ -15,6 +15,7 @@ function Cards(props) {
                             cardDescription = {key.description}
                             cardPrice = {key.price}
                             cardWeight = {key.weight}
+                            handleAdd = {props.handleAdd}
                         />
                     )}
                 )
@@ -22,5 +23,3 @@ function Cards(props) {
         </main>
     );
 }
-
-export default Cards;
