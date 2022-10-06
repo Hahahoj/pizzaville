@@ -4,6 +4,7 @@ import Basket from "../components/Basket";
 import BasketFooter from '../components/BasketFooter';
 
 export default function BasketPage() {
+    global.sum=0;
     return (
         <div className="App2">
             <div className="container2">

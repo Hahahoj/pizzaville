@@ -1,4 +1,5 @@
 import "./Card.css";
+// import { useDispatch } from "react-redux"
 
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
@@ -8,6 +9,8 @@ export default function Card(props) {
         cardWeightConverted = cardWeightConverted + " г.";
     };
     let cardURLConverted = "../Images/Menu/" + props.cardImage;
+
+    // const dispatch = useDispatch();
 
     return (
         <div className="Card">
@@ -19,8 +22,7 @@ export default function Card(props) {
                     <span className="CardPrice">{props.cardPrice} р. / </span>
                     <span className="CardWeight">{cardWeightConverted}</span>
                 </div>
-                <div onClick={props.handleAdd} className="CardButton">
-                </div>
+                <div onClick={() => props.handleAdd(props.cardPrice)} className="CardButton"></div>
             </div>
         </div>
     );

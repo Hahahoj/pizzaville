@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Header(props) {
     let inCart = props.orderItems;
-    if (inCart > 100) {
-        inCart = inCart % 100;
-    }
-    if (inCart > 20) { inCart = inCart % 10; console.log(inCart);}
+    if (inCart > 100) { inCart = inCart % 100; }
+    if (inCart > 20) { inCart = inCart % 10; }
     const spelling = ` товар${inCart===0 ? "ов" : inCart===1 ? "" : inCart<5 ? "а" :inCart<21 ? "ов" : ""} `
 
     return (
