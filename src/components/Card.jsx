@@ -10,6 +10,8 @@ export default function Card(props) {
     };
     let cardURLConverted = "../Images/Menu/" + props.cardImage;
 
+    let cardPriceConverted = props.cardPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
     // const dispatch = useDispatch();
 
     return (
@@ -19,7 +21,7 @@ export default function Card(props) {
             <p className="CardDescription">{props.cardDescription}</p>
             <div className="CardProperties">
                 <div>
-                    <span className="CardPrice">{props.cardPrice} р. / </span>
+                    <span className="CardPrice">{cardPriceConverted} р. / </span>
                     <span className="CardWeight">{cardWeightConverted}</span>
                 </div>
                 <div onClick={() => props.handleAdd(props.cardPrice)} className="CardButton"></div>
