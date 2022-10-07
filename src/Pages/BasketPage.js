@@ -5,7 +5,7 @@ import BasketFooter from '../components/BasketFooter';
 
 export default function BasketPage() {
     return (
-        <div className="App2">
+        <div className="basketPage">
             <div className="container2">
                 <BasketHeader />
                 <Basket />

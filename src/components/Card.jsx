@@ -1,9 +1,11 @@
 import "./Card.css";
-// import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
+import { addProductInBasket } from "../store/reducers/basket.js"
 
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
 export default function Card(props) {
+
     let cardWeightConverted = props.cardWeight;
     if (isNumber(props.cardWeight)) {
         cardWeightConverted = cardWeightConverted + " г.";
@@ -12,7 +14,18 @@ export default function Card(props) {
 
     let cardPriceConverted = props.cardPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+
+    const handleAdd = () => {
+        dispatch(addProductInBasket( { ...props, itemId: uid() }))
+    } 
+
+    // генератор уникального ключа
+    function uid() {
+        let a = new Uint32Array(3);
+        window.crypto.getRandomValues(a);
+        return (performance.now().toString(36)+Array.from(a).map(A => A.toString(36)).join("")).replace(/\./g,"");
+    };
 
     return (
         <div className="Card">
@@ -24,7 +37,9 @@ export default function Card(props) {
                     <span className="CardPrice">{cardPriceConverted} р. / </span>
                     <span className="CardWeight">{cardWeightConverted}</span>
                 </div>
-                <div onClick={() => props.handleAdd(props.cardPrice)} className="CardButton"></div>
+                {/* так onClick работает по старому заданию от 29.09.2022
+                <div onClick={() => props.handleAdd(props.cardPrice)} className="CardButton"></div> */}
+                <div onClick={handleAdd} className="CardButton"></div>
             </div>
         </div>
     );

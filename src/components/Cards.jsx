@@ -3,6 +3,7 @@ import { products } from "../menuList";
 import Card from "./Card";
 
 export default function Cards(props) {
+
     return (
         <main className="Cards">
             {
@@ -10,12 +11,14 @@ export default function Cards(props) {
                     return (
                         <Card
                             key = {i}
+                            itemId = {'none'}
+                            productID = {i}
                             cardImage = {key.img}
                             cardTitle = {key.name}
                             cardDescription = {key.description}
                             cardPrice = {key.price}
                             cardWeight = {key.weight}
-                            handleAdd = {props.handleAdd}
+                            // handleAdd = {props.handleAdd}
                         />
                     )}
                 )
