@@ -1,0 +1,15 @@
+.SubmitButton {
+    width: 200px;
+    height: 42px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    background-color: #D58C51;
+    text-align: center;
+    border-width: 0;
+}
+
+.SubmitButton-markup{
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 import "./BasketCard.css";
 import { useDispatch } from "react-redux"
 import { delProductInBasket } from "../store/reducers/basket.js"
+import { useNavigate } from "react-router-dom";
 
 export default function BasketCard(props) {
     let cardURLConverted = "../Images/Menu/" + props.cardImage;
@@ -9,17 +10,20 @@ export default function BasketCard(props) {
     const dispatch = useDispatch();
 
     const handleDel = () => {
-        console.log(props);
         dispatch(delProductInBasket(props.itemId));
     } 
+
+    const navigate = useNavigate();
 
     return (
         
         <div className="basketCard">
-            <img className="bCardImage" src={cardURLConverted} alt="Изображение товара" />
+            <div onClick = { () => navigate( "/" + props.productID)} >
+                <img className="bCardImage" src={cardURLConverted} alt="Изображение товара" />
+            </div>
             <h2 className="bCardTitle">{props.cardTitle}</h2>
             <p className="bCardPrice">{cardPriceConverted} ₽</p>
-            <div onClick={handleDel} className="bCardButton"></div>
+            <button onClick={handleDel} className="bCardButton"></button>
         </div>
         
     );

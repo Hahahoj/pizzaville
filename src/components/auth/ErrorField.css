@@ -1,0 +1,9 @@
+.ErrorField {
+    height: 10px;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: center;
+    color: #FF0B0B;
+    margin-bottom: 12px;
+}

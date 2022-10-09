@@ -4,22 +4,15 @@ h1 {
     line-height: 38px;
     text-transform: uppercase;
     color:white;   
-    margin: 53px 0px 38px 0px;
+    margin: 40px 334px 38px 0px;
     font-stretch: extra-expanded;
 }
 
 .basketHeader {
-    position: relative;
-    margin: 0;
-} 
+    display: flex;
+    align-items:center;
+}
 
-.button_back {
-    position:absolute;
-    top: 4px;
-    left: 296px;
-    border-width: 0;
-    background: url("../Images/Basket/icon__back.svg");
-    width: 32px;
-    height: 32px;
-    cursor:pointer;
+.basketHeader .button_to_back {
+    margin: 0 63px 0 73px;
 }

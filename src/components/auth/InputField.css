@@ -1,0 +1,25 @@
+.InputField {
+    width: 380px;
+    height: 39px;
+    border-width:0;
+    background-image: url("../../Images/Auth/Input_Custom.png");
+    background-repeat: no-repeat;
+    margin: 0 20px 0 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #161516;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+.Description {
+    height: 10px;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 10px;
+    color: #FF0B0B;
+    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 5px;
+}

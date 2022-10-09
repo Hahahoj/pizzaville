@@ -1,13 +1,13 @@
 import "./BasketHeader.css"
-import { Link } from "react-router-dom";
+import ButtonToLog from "./ButtonToLog";
+import ButtonToBack from "./ButtonToBack";
 
-export default function BasketHeader(props) {
+export default function BasketHeader() {
     return (
         <header className="basketHeader">
+            <ButtonToBack />
             <h1 className="basketHeaderH1">Корзина с выбранными товарами</h1>
-            <Link to="/">
-                <button class="button_back" />
-            </Link>
+            <ButtonToLog />
         </header>
     );
 }

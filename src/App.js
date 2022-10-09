@@ -3,14 +3,16 @@
 import { Route, Routes } from 'react-router-dom';
 import ProductsPage from './Pages/ProductsPage';
 import BasketPage from './Pages/BasketPage';
-import NotFound from "./Pages/NotFound";
+import ItemPage from './Pages/ItemPage';
+import AuthPage from './Pages/AuthPage'
 
 export default function App() {
     return (
         <Routes>
-            <Route path="/" element={<ProductsPage />} /> 
+            <Route path="/" element={<AuthPage />} /> 
+            {/* <Route path="/" element={<ProductsPage />} />  */}
             <Route path="/basket" element = {<BasketPage />} /> 
-            <Route path="*" element = {<NotFound />} /> 
+            <Route path="/:id" element = {<ItemPage />} /> 
         </Routes>
     );
 }

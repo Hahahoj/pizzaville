@@ -1,6 +1,7 @@
 import "./Card.css";
 import { useDispatch } from "react-redux"
 import { addProductInBasket } from "../store/reducers/basket.js"
+import { useNavigate } from "react-router-dom"
 
 function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
 
@@ -27,9 +28,13 @@ export default function Card(props) {
         return (performance.now().toString(36)+Array.from(a).map(A => A.toString(36)).join("")).replace(/\./g,"");
     };
 
+    const navigate = useNavigate(); 
+
     return (
         <div className="Card">
-            <img className="CardImage" src={cardURLConverted} alt="Изображение товара" />
+            <div onClick = { () => navigate( "/" + props.productID)} >
+                <img className="CardImage" src={cardURLConverted} alt="Изображение товара" />
+            </div>
             <h2 className="CardTitle">{props.cardTitle}</h2>
             <p className="CardDescription">{props.cardDescription}</p>
             <div className="CardProperties">
@@ -37,8 +42,6 @@ export default function Card(props) {
                     <span className="CardPrice">{cardPriceConverted} р. / </span>
                     <span className="CardWeight">{cardWeightConverted}</span>
                 </div>
-                {/* так onClick работает по старому заданию от 29.09.2022
-                <div onClick={() => props.handleAdd(props.cardPrice)} className="CardButton"></div> */}
                 <div onClick={handleAdd} className="CardButton"></div>
             </div>
         </div>

@@ -9,7 +9,7 @@ export default function BasketPage() {
             <div className="container2">
                 <BasketHeader />
                 <Basket />
-                <BasketFooter summary = "6220" />
+                <BasketFooter />
             </div>
         </div>
     );

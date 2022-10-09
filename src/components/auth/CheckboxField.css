@@ -1,0 +1,23 @@
+.CheckboxField {
+    display: inline-block;
+    width: 18px;
+    height:18px;
+    border-radius: 50%;
+    border: 1px solid #D58C51;
+    margin-right: 10px;
+    margin-left: 21px;
+}
+
+.CheckboxDescription {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #301411;
+}
+
+.Checkbox-markup {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 6px;
+}

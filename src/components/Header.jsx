@@ -2,6 +2,7 @@ import "./Header.css"
 import icon from "../Images/Header/icon.svg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ButtonToLog from "./ButtonToLog";
 
 export default function Header(props) {
     const basket = useSelector(state => state.basket.basket);
@@ -29,6 +30,7 @@ export default function Header(props) {
                 <Link to="/basket">
                     <img src={icon} className="Order-icon" alt="order" />
                 </Link>
+                <ButtonToLog />
             </div>  
         </header> 
     )

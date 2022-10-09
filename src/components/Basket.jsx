@@ -1,12 +1,9 @@
-import { useSelector } from "react-redux";
 import "./Basket.css"
+import { useSelector } from "react-redux";
 import BasketCard from "./BasketCard"
 
-export default function Basket(props) {
+export default function Basket() {
     const basket = useSelector(state => state.basket.basket);
-    console.log("basket=",basket);
-    console.log("b0=",basket[0]);
-    console.log(basket.length);
 
     return (
         <main className="Order">
