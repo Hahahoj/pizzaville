@@ -12,9 +12,9 @@ export default function FormAuth() {
         <div className="FormAuth">
             <SwitchMode name="Зарегистрироваться" />
             <WindowsTitle name="Вход" />
-            <InputField name="Логин" description="Логин должен содержать не менее 4-х символов" />
+            <InputField name="Логин" type="text" description="Логин должен содержать не менее 4-х символов" />
             {/* <InputField name="Пароль" description="" /> */}
-            <InputField name="Пароль" description="Поле не должно быть пустым" />
+            <InputField name="Пароль" type="password" description="Поле не должно быть пустым" />
             <CheckboxField description="Я согласен получать обновления на почту" /> 
             {/* <ErrorField description="" /> */}
             <ErrorField description="Логин или пароль неверен" />
