@@ -7,6 +7,12 @@ import CheckboxField from "./auth/CheckboxField";
 import ErrorField from "./auth/ErrorField";
 import SubmitButton from "./auth/SubmitButton"
 
+
+let login;
+let password;
+let checkbox;
+let error=false;
+
 //подготавливаем локальное хранилище к работе
 let loginsData = [];
 loginsData = JSON.parse(localStorage.getItem("loginsArray"));
@@ -67,20 +73,89 @@ export default function FormAuth() {
     };
 
     const SubmitUser = () => {
-        global.State=!global.State;
+        error=false;
+        login = document.getElementById("loginfield").value;
+        password = document.getElementById("passwordfield").value;
         setMode(global.State);
-        console.log("GS=",global.State);
-        console.log("value=",value);
-        ForceUpdate();
+        if (global.State ) {
+            // Регистрация
+            loginsData = loginsData || [];
+            loginsData.forEach(element => {
+                if (element.login === login) {
+                    d.InputFieldLogin="Пользователь с таким login уже существует";
+                    error=true;
+                }
+            });
+            if (login.length < 4) {
+                d.InputFieldLogin="Логин должен содержать не менее 4-х символов";
+                error=true;
+            }
+            if (password.length < 4) {
+                d.InputFieldPsw="Пароль должен содержать не менее 4-х символов";
+                error=true;
+            }
+            if (login === "") {
+                d.InputFieldLogin="Поле не должно быть пустым";
+                error=true;
+            }
+            if (password === "") {
+                d.InputFieldPsw="Поле не должно быть пустым";
+                error=true;
+            }
+            if (error) {
+                ForceUpdate();
+                return;
+            }
+            loginsData = loginsData || [];
+            loginsData.push({ login: login, password: password });
+            let serialEntry = JSON.stringify(loginsData);
+            localStorage.setItem("loginsArray", serialEntry);
+            global.State=!global.State;
+            setMode(global.State);
+            ForceUpdate();
+            return;
+        } else {
+            // Вход
+            if (login === "") {
+                d.InputFieldLogin="Поле не должно быть пустым";
+                error=true;
+            }
+            if (password === "") {
+                d.InputFieldPsw="Поле не должно быть пустым";
+                error=true;
+            }
+            if (error) {
+                ForceUpdate();
+                return;
+            }
+            error=!error;
+            loginsData = loginsData || [];
+            loginsData.forEach(element => {
+                if (element.login === login) {
+                    if (element.password === password) {
+                        // залогинились
+                        global.logined=login;
+                        window.location.href = "/";
+                        error=false;
+                    }
+                }
+            });
+            if (error) {
+                // Остается только ошибка несоответствия пароля или login
+                d.ErrorField="Логин или пароль неверен";
+                ForceUpdate();
+            };
+        };
+                
     };
         
     return (
         <div className="FormAuth">
             <SwitchMode name={d.SwitchMode} onswitch={switchWindowMode} />
             <WindowsTitle name={d.WindowsTitle} />
-            <InputField name="Логин" type="text" description={d.InputFieldLogin} />
+            <InputField name="Логин" type="text" id="loginfield" description={d.InputFieldLogin} />
             {/* <InputField name="Пароль" description="" /> */}
-            <InputField name="Пароль" type="password" description={d.InputFieldPsw} />
+            <InputField name="Пароль" type="password" id="passwordfield" description={d.InputFieldPsw} />
             <CheckboxField description="Я согласен получать обновления на почту" /> 
             <ErrorField description={d.ErrorField} />
             {/* <SubmitButton name={d.SubmitButton} onpress={SubmitUser} /> */}

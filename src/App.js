@@ -1,5 +1,3 @@
-
-
 import { Route, Routes } from 'react-router-dom';
 import ProductsPage from './Pages/ProductsPage';
 import BasketPage from './Pages/BasketPage';
@@ -9,8 +7,8 @@ import AuthPage from './Pages/AuthPage'
 export default function App() {
     return (
         <Routes>
-            <Route path="/" element={<AuthPage />} /> 
-            {/* <Route path="/" element={<ProductsPage />} />  */}
+            <Route path="/" element={<ProductsPage />} />  
+            <Route path="/auth" element={<AuthPage />} /> 
             <Route path="/basket" element = {<BasketPage />} /> 
             <Route path="/:id" element = {<ItemPage />} /> 
         </Routes>
