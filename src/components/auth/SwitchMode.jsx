@@ -1,8 +1,10 @@
 import "./SwitchMode.css"
 
-export default function SwitchMode({name}) {
+export default function SwitchMode({name,onswitch}) {
 
     return (
-        <button className="SwitchMode">{name}</button>
+        <div className="">
+            <button className="SwitchMode" onClick={ onswitch }>{ name }</button>
+        </div>
     );
 }

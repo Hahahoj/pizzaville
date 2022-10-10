@@ -7,50 +7,84 @@ import CheckboxField from "./auth/CheckboxField";
 import ErrorField from "./auth/ErrorField";
 import SubmitButton from "./auth/SubmitButton"
 
-let ErrorFieldDesc;
+//подготавливаем локальное хранилище к работе
+let loginsData = [];
+loginsData = JSON.parse(localStorage.getItem("loginsArray"));
 
-const UseState0 = () => {
-    ErrorFieldDesc = "";
-}
+// false - режим ввода 
+// true - режим регистрации
+global.State = false;
 
-const UseState1 = () => {
-    ErrorFieldDesc = "Логин или пароль неверен";
-}
+let d = {};
 
+const setMode = (mode=false) => {
+    if (mode) {
+        d = {
+            "SwitchMode": "Авторизоваться",
+            "WindowsTitle": "Регистрация",
+            "InputFieldLogin": "",
+            "InputFieldPsw": "",
+            "ErrorField": "",
+            "SubmitButton": "Зарегистрироваться"
+        }
+    } else {
+        d = {
+            "SwitchMode": "Зарегистрироваться",
+            "WindowsTitle": "Вход",
+            "InputFieldLogin": "",
+            "InputFieldPsw": "",
+            "ErrorField": "",
+            "SubmitButton": "Войти"
+        } 
+    }
+};
 
+setMode(global.State);
+
+// const UseState0 = () => {
+//     d.ErrorField = "";
+// }
+
+// const UseState1 = () => {
+//     d.ErrorField="Логин или пароль неверен";
+//     console.log("ErrorField=",d.ErrorField);
+//     console.log("d=", d);
+// }
 
 
 export default function FormAuth() {
 
     const [value, setValue] = useState(0);
 
-    const useForceUpdate = () => { // integer state
-            setValue( value => value + 1 ); 
-            global.State=!global.State;
-            console.log("GS=",global.State);
-            if (global.State) { UseState0(); }
-                else { UseState1() };
-            console.log("ErrorFieldDesc=",ErrorFieldDesc);
-            console.log("value=",value);
-    }
-    
+    const ForceUpdate = () => { 
+        setValue( value => !value); 
+    };    
+
+    const switchWindowMode = () => {
+        global.State=!global.State;
+        setMode(global.State);
+        ForceUpdate();
+    };
 
     const SubmitUser = () => {
         global.State=!global.State;
-        const forceUpdate = useForceUpdate();
-    }
+        setMode(global.State);
+        console.log("GS=",global.State);
+        console.log("value=",value);
+        ForceUpdate();
+    };
         
     return (
         <div className="FormAuth">
-            <SwitchMode name="Зарегистрироваться" />
-            <WindowsTitle name="Вход" />
-            <InputField name="Логин" type="text" description="Логин должен содержать не менее 4-х символов" />
+            <SwitchMode name={d.SwitchMode} onswitch={switchWindowMode} />
+            <WindowsTitle name={d.WindowsTitle} />
+            <InputField name="Логин" type="text" description={d.InputFieldLogin} />
             {/* <InputField name="Пароль" description="" /> */}
-            <InputField name="Пароль" type="password" description="Поле не должно быть пустым" />
+            <InputField name="Пароль" type="password" description={d.InputFieldPsw} />
             <CheckboxField description="Я согласен получать обновления на почту" /> 
-            {/* <ErrorField description="" /> */}
-            <ErrorField description={ErrorFieldDesc} />
-            <SubmitButton name="Войти" onpress={useForceUpdate} />
+            <ErrorField description={d.ErrorField} />
+            {/* <SubmitButton name={d.SubmitButton} onpress={SubmitUser} /> */}
+            <SubmitButton name={d.SubmitButton} onpress={SubmitUser} />
         </div>
     );
 }
