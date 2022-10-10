@@ -6,6 +6,8 @@ export default function ButtonToLog() {
     const navigate = useNavigate();
 
     return (
-        <button className="button_to_log" onClick = { () => navigate("/auth")} >Выход</button>
+        <button className="button_to_log" onClick = { () => { 
+            global.logined="";
+            navigate("/auth")}} >Выход</button>
     )
 }
