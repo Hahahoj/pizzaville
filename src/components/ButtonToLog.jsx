@@ -7,7 +7,7 @@ export default function ButtonToLog() {
 
     return (
         <button className="button_to_log" onClick = { () => { 
-            global.logined="";
+            global.log="";
             navigate("/auth")}} >Выход</button>
     )
 }

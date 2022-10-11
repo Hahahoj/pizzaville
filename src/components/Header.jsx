@@ -6,7 +6,6 @@ import ButtonToLog from "./ButtonToLog";
 
 export default function Header(props) {
     const basket = useSelector(state => state.basket.basket);
-    console.log(basket.length);
     let inCart = basket.length;
     if (inCart > 100) { inCart = inCart % 100; }
     if (inCart > 20) { inCart = inCart % 10; }

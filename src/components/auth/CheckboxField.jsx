@@ -1,6 +1,6 @@
 import "./CheckboxField.css"
 
-export default function CheckboxField({description,checked}) {
+export default function CheckboxField({description}) {
     return (
         <div className="Checkbox-markup">
             <input type="checkbox" className="CheckboxField"></input>

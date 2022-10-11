@@ -43,7 +43,7 @@ export default function Cards({pageID}) {
                     {products[ID].name}
                 </h2>
                 <p className = "description">
-                    {/* имитируем большой и толстый текст */}
+                    {/* имитируем большой и толстый текст. по идее этот текст должен находится отдельным полем*/}
                     {products[ID].description}
                     {products[ID].description}
                     {products[ID].description}
