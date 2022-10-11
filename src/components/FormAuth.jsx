@@ -1,5 +1,6 @@
 import "./FormAuth.css"
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import SwitchMode from "./auth/SwitchMode";
 import WindowsTitle from "./auth/WindowsTitle";
 import InputField from "./auth/InputField";
@@ -47,20 +48,10 @@ const setMode = (mode=false) => {
 
 setMode(global.State);
 
-// const UseState0 = () => {
-//     d.ErrorField = "";
-// }
-
-// const UseState1 = () => {
-//     d.ErrorField="Логин или пароль неверен";
-//     console.log("ErrorField=",d.ErrorField);
-//     console.log("d=", d);
-// }
-
-
 export default function FormAuth() {
 
     const [value, setValue] = useState(0);
+    const navigate = useNavigate();
 
     const ForceUpdate = () => { 
         setValue( value => !value); 
@@ -134,7 +125,9 @@ export default function FormAuth() {
                 if (element.login === login) {
                     if (element.password === password) {
                         // залогинились
-                        global.logined=login;
+                        global.logined = login;
+                        console.log(login);
+                        navigate("/");
                         window.location.href = "/";
                         error=false;
                     }

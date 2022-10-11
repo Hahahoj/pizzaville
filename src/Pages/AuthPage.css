@@ -1,4 +1,8 @@
-body {
+.AuthPage {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
     background: url("../Images/Auth/Auth.png"); 
     background-size: cover; 
 }
@@ -9,3 +13,7 @@ body {
     margin: 0 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* .body {
+    background-color: black;
+} */

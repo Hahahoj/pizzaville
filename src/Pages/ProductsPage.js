@@ -1,13 +1,16 @@
 import './ProductsPage.css';
 import Header from "../components/Header";
 import Cards from "../components/Cards";
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsPage() {
-
-  if (global.logined===""||(typeof(global.logined) != "undefined")) {
-    window.location.href = "AuthPage";
-  }   
+  // const navigate = useNavigate();
+  // console.log("GL=",!(global.logined));
+  // console.log(typeof(global.logined) != "undefined");
+  // if (!global.logined) {
+  //   navigate("/auth");
+  // }  
+  
 return (
   <div className="products">
     <div className="container">
