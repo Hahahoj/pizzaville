@@ -1,6 +1,5 @@
-.lineBreak {
-    background-image: url("../Images/Basket/lineBreak.svg");
-    width:1438px;
-    height: 1px;
-    margin-top: 102px;
+.Order {
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }

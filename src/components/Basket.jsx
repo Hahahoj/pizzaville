@@ -23,7 +23,6 @@ export default function Basket() {
                     )}
                 )
             }
-            <div className = "lineBreak"></div>
         </main>
     );
 }

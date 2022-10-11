@@ -11,14 +11,17 @@ export default function BasketFooter() {
     let summaryConverted = cartPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
     return (
-        <footer className = "footer">
-            <div className = "footerText">
-                Заказ на сумму:
-            </div>
-            <div className = "footerSum">
-                {summaryConverted} ₽
-            </div>
-            <button className = "buttonAcceptOrder">Оформить заказ</button>
-        </footer>
+        <>
+            <div className = "lineBreak"></div>
+            <footer className = "footer">
+                <div className = "footerText">
+                    Заказ на сумму:
+                </div>
+                <div className = "footerSum">
+                    {summaryConverted} ₽
+                </div>
+                <button className = "buttonAcceptOrder">Оформить заказ</button>
+            </footer>
+        </>    
     );
 }
