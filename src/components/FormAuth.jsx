@@ -53,7 +53,8 @@ export default function FormAuth() {
     const navigate = useNavigate();
 
     const ForceUpdate = () => { 
-        setValue( value => !value); 
+        setValue( value => !value);
+        console.log(value); 
     };    
 
     const switchWindowMode = () => {
@@ -64,8 +65,12 @@ export default function FormAuth() {
 
     const SubmitUser = () => {
         error=false;
-        login = document.getElementById("loginfield").value;
-        password = document.getElementById("passwordfield").value;
+        if (document.getElementById("loginfield").value!=null) {
+            login = document.getElementById("loginfield").value;
+        };
+        if (document.getElementById("passwordfield").value!=null) {
+            password = document.getElementById("passwordfield").value;
+        }
         setMode(global.State);
         if (global.State ) {
             // Регистрация
@@ -124,10 +129,8 @@ export default function FormAuth() {
                 if (element.login === login) {
                     if (element.password === password) {
                         // залогинились
-                        global.logined = login;
-                        console.log(login);
-                        navigate("/");
-                        window.location.href = "/";
+                        global.log = login;
+                        navigate("/store");
                         error=false;
                     }
                 }
@@ -145,12 +148,10 @@ export default function FormAuth() {
         <div className="FormAuth">
             <SwitchMode name={d.SwitchMode} onswitch={switchWindowMode} />
             <WindowsTitle name={d.WindowsTitle} />
-            <InputField name="Логин" type="text" id="loginfield" description={d.InputFieldLogin} />
-            {/* <InputField name="Пароль" description="" /> */}
-            <InputField name="Пароль" type="password" id="passwordfield" description={d.InputFieldPsw} />
+            <InputField name="Логин" type="text" fieldid="loginfield" description={d.InputFieldLogin} />
+            <InputField name="Пароль" type="password" fieldid="passwordfield" description={d.InputFieldPsw} />
             <CheckboxField description="Я согласен получать обновления на почту" /> 
             <ErrorField description={d.ErrorField} />
-            {/* <SubmitButton name={d.SubmitButton} onpress={SubmitUser} /> */}
             <SubmitButton name={d.SubmitButton} onpress={SubmitUser} />
         </div>
     );
