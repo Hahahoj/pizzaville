@@ -11,7 +11,6 @@ import SubmitButton from "./auth/SubmitButton"
 
 let login;
 let password;
-let checkbox;
 let error=false;
 
 //подготавливаем локальное хранилище к работе

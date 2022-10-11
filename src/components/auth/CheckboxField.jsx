@@ -3,7 +3,7 @@ import "./CheckboxField.css"
 export default function CheckboxField({description,checked}) {
     return (
         <div className="Checkbox-markup">
-            <span className="CheckboxField"></span>
+            <input type="checkbox" className="CheckboxField"></input>
             <span className="CheckboxDescription">{description}</span>
         </div>
     );

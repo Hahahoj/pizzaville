@@ -4,9 +4,18 @@
     height:18px;
     border-radius: 50%;
     border: 1px solid #D58C51;
+    vertical-align: middle;
     margin-right: 10px;
     margin-left: 21px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
+
+.CheckboxField:checked {
+    background-color: #D58C51;
+} 
+
 
 .CheckboxDescription {
     font-weight: 300;
@@ -21,3 +30,22 @@
     align-items: center;
     margin-bottom: 6px;
 }
+
+/* 
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: gray;
+} 
+*/

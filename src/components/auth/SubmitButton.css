@@ -14,3 +14,16 @@
 .SubmitButton-markup{
     text-align: center;
 }
+
+.SubmitButton:active {
+    animation: color-change 0.3s 1;
+}
+
+@keyframes color-change {
+    0% {    background-color:#D58C51;
+            color:#131313; }
+    50% {   background-color:#131313;
+            color:#D58C51; }
+    100% {  background-color: #D58C51; 
+            color:#131313; }
+}
