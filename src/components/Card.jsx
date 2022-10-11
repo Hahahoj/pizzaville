@@ -32,11 +32,11 @@ export default function Card(props) {
 
     return (
         <div className="Card">
-            <div onClick = { () => navigate( "/" + props.productID)} >
+            <div className="CardLink" onClick = { () => navigate( "/" + props.productID)} >
                 <img className="CardImage" src={cardURLConverted} alt="Изображение товара" />
+                <h2 className="CardTitle">{props.cardTitle}</h2>
+                <p className="CardDescription">{props.cardDescription}</p>
             </div>
-            <h2 className="CardTitle">{props.cardTitle}</h2>
-            <p className="CardDescription">{props.cardDescription}</p>
             <div className="CardProperties">
                 <div>
                     <span className="CardPrice">{cardPriceConverted} р. / </span>

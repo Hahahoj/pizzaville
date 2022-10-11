@@ -71,3 +71,7 @@ p.CardDescription {
     margin-bottom: 87px;
 }
 
+.CardLink {
+    cursor:pointer;
+}
+
