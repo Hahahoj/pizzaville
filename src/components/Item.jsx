@@ -29,12 +29,12 @@ export default function Cards({pageID}) {
 
     const handleAdd = () => {
         dispatch(addProductInBasket( { 
-            "key": products[ID].id, "itemId": uid(), "productID": products[ID].id,
+            "key": products[ID].id-1, "itemId": uid(), "productID": products[ID].id-1,
             "cardImage": products[ID].img, "cardTitle": products[ID].name,
             "cardDescription": products[ID].description,"cardPrice": products[ID].price,
             "cardWeight": products[ID].weight}));
         };
-            
+    console.log(products[ID]);        
     return (        
         <div className = "item">
             <img className = "image" src={"../Images/Menu/" + products[ID].img} alt="Вид товара" />        

@@ -14,11 +14,12 @@ export default function BasketCard(props) {
     } 
 
     const navigate = useNavigate();
+    console.log("render=",props);
 
     return (
         
         <div className="basketCard">
-            <div onClick = { () => navigate( "/" + props.productID)} >
+            <div onClick = { () => navigate( "/" + (props.productID))} >
                 <img className="bCardImage" src={cardURLConverted} alt="Изображение товара" />
             </div>
             <h2 className="bCardTitle">{props.cardTitle}</h2>
