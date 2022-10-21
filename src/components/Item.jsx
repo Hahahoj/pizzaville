@@ -37,7 +37,7 @@ export default function Cards({pageID}) {
     console.log(products[ID]);        
     return (        
         <div className = "item">
-            <img className = "image" src={"../Images/Menu/" + products[ID].img} alt="Вид товара" />        
+            <img className = "image" src={"/pizzaville/Images/Menu/" + products[ID].img} alt="Вид товара" />        
             <div className = "column-markup">
                 <h2 className = "title">
                     {products[ID].name}

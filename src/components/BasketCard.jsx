@@ -4,7 +4,7 @@ import { delProductInBasket } from "../store/reducers/basket.js"
 import { useNavigate } from "react-router-dom";
 
 export default function BasketCard(props) {
-    let cardURLConverted = "../Images/Menu/" + props.cardImage;
+    let cardURLConverted = "/pizzaville/Images/Menu/" + props.cardImage;
     let cardPriceConverted = props.cardPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
     const dispatch = useDispatch();

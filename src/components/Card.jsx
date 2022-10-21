@@ -11,7 +11,7 @@ export default function Card(props) {
     if (isNumber(props.cardWeight)) {
         cardWeightConverted = cardWeightConverted + " г.";
     };
-    let cardURLConverted = "../Images/Menu/" + props.cardImage;
+    let cardURLConverted = "/pizzaville/Images/Menu/" + props.cardImage;
 
     let cardPriceConverted = props.cardPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
@@ -32,7 +32,7 @@ export default function Card(props) {
 
     return (
         <div className="Card">
-            <div className="CardLink" onClick = { () => navigate( "/" + props.productID)} >
+            <div className="CardLink" onClick = { () => navigate( "/pizzaville/" + props.productID)} >
                 <img className="CardImage" src={cardURLConverted} alt="Изображение товара" />
                 <h2 className="CardTitle">{props.cardTitle}</h2>
                 <p className="CardDescription">{props.cardDescription}</p>
