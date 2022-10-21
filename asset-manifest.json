@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pizzaville/static/css/main.1c2ff1fb.css",
-    "main.js": "/pizzaville/static/js/main.b2a8d29a.js",
+    "main.js": "/pizzaville/static/js/main.2e6e8dec.js",
     "static/media/Auth.png": "/pizzaville/static/media/Auth.36510e5cb68b32ccf0b7.png",
     "static/media/background_fix.png": "/pizzaville/static/media/background_fix.87a2899559b52febf9db.png",
     "static/media/icon.svg": "/pizzaville/static/media/icon.72e035aa7c2acbb899c9f23e2b1122b4.svg",
@@ -12,10 +12,10 @@
     "static/media/icon__add_hover.svg": "/pizzaville/static/media/icon__add_hover.ac7a21c64985e82186c5.svg",
     "static/media/lineBreak.svg": "/pizzaville/static/media/lineBreak.ef64f783abd9529cb038.svg",
     "main.1c2ff1fb.css.map": "/pizzaville/static/css/main.1c2ff1fb.css.map",
-    "main.b2a8d29a.js.map": "/pizzaville/static/js/main.b2a8d29a.js.map"
+    "main.2e6e8dec.js.map": "/pizzaville/static/js/main.2e6e8dec.js.map"
   },
   "entrypoints": [
     "static/css/main.1c2ff1fb.css",
-    "static/js/main.b2a8d29a.js"
+    "static/js/main.2e6e8dec.js"
   ]
 }
