@@ -1,0 +1,77 @@
+.Card {
+    border: 1px solid #D58C51;
+    position: relative;
+    color: #FFFFFF;
+    margin: 15px 0;
+}
+
+.Card:hover {
+    color: #D58C51;
+}
+
+.CardButton:active {
+    background-image: url("../Images/Menu/icon__add_hover.svg");
+} 
+
+.CardImage {
+    width: 270px;
+    height: 270px;
+    padding: 43px 20px 30px 20px;
+    cursor:pointer;
+}
+
+h2.CardTitle {    
+    text-align:left;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0 0 13px 0;
+    padding: 0 22px 0 22px;
+}
+
+p.CardDescription {
+    text-align:left ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 22px 0 22px;
+}
+
+.CardProperties {
+    position: absolute;
+    bottom: 30px;
+    left: 22px;
+    display: flex;
+}
+
+.CardPrice {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.CardWeight {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.CardButton {
+    position:absolute;
+    bottom: -8px; 
+    left: 234px; 
+    background-image: url("../Images/Menu/icon__add.svg");
+    background-repeat: no-repeat;
+    width:31px;
+    height:31px;
+    cursor:pointer;
+}
+
+.Card:last-child {
+    margin-bottom: 87px;
+}
+
+.CardLink {
+    cursor:pointer;
+}
+

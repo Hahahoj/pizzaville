@@ -1,0 +1,15 @@
+.ItemPage {
+    background: url("../Images/Item/background_fix.png"); 
+}
+
+.container3 {
+    text-align: center;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #161516;
+}

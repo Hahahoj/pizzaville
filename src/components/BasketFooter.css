@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    align-items:center;
+    padding: 28px 290px;
+}
+
+.footerText {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex-shrink:0;
+}
+
+.footerSum {
+    width: 456px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D58C51;
+    padding-left: 16px;
+    text-align: left;
+    flex-shrink:1;
+}
+
+.buttonAcceptOrder {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    background-color: #D58C51;
+    padding: 12px 40px;
+    cursor:pointer;
+    flex-shrink: 0;
+}
+
+.lineBreak {
+    background-image: url("../Images/Basket/lineBreak.svg");
+    width:1438px;
+    height: 1px;
+    /* margin-top: 102px; */
+}

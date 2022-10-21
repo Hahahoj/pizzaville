@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import ProductsPage from './Pages/ProductsPage';
+import BasketPage from './Pages/BasketPage';
+import ItemPage from './Pages/ItemPage';
+import AuthPage from './Pages/AuthPage';
+import StartPage from './Pages/StartPage';
+import NotFound from './Pages/NotFound';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        //<ProductsPage />
+        <Routes>
+            <Route path="/pizzaville/" element={<StartPage />} />  
+            <Route path="/pizzaville/auth" element={<AuthPage />} />
+            <Route path="/pizzaville/store" element={<ProductsPage />} /> 
+            <Route path="/pizzaville/basket" element = {<BasketPage />} /> 
+            <Route path="/pizzaville/:id" element = {<ItemPage />} /> 
+            <Route path="*" element = {<NotFound />} /> 
+        </Routes>
+    );
 }
-
-export default App;

@@ -1,0 +1,17 @@
+.button_to_log {
+    width: 200px;
+    height: 42px;
+    background-color: transparent;
+    border-color: #D58C51 ;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D58C51;
+
+    margin-top: 3px;
+    padding-top: 0;
+
+    cursor: pointer;
+}

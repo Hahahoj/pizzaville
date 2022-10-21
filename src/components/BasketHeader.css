@@ -1,0 +1,18 @@
+h1 {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color:white;   
+    margin: 40px 334px 38px 0px;
+    font-stretch: extra-expanded;
+}
+
+.basketHeader {
+    display: flex;
+    align-items:center;
+}
+
+.basketHeader .button_to_back {
+    margin: 0 63px 0 73px;
+}

@@ -1,0 +1,16 @@
+.SwitchMode {
+    font-family: 'Montserrat';
+    margin-left: 300px;
+    width: 150px;
+    height:14px;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #D58C51;
+    border-width: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
