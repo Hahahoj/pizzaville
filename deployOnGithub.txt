@@ -1,0 +1,32 @@
+1) npm install gh-pages --save-dev
+
+2) Редактируем 
+{
+  "name": "my-app",
+  "version": "0.1.0",
++ "homepage": "https://gitname.github.io/react-gh-pages",
+  "private": true,
+
+3) Редактируем
+"scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+
+4) Добавляем репозиторий к внутреннему гиту:
+Для проекта:
+git remote add origin https://github.com/{username}/{repo-name}.git
+Для корня репозитория:
+git remote add origin https://github.com/gitname/react-gh-pages.git
+Если проект уже был привязан:
+git remote set-url origin git://new.url.here
+
+построение проекта: 
+npm run deploy или
+npm run deploy -- -m "Deploy React app to GitHub Pages"
+
+5) бекавп самого проекта стандартен:
+git add .
+git commit -m "Configure React app for deployment to GitHub Pages"
+git push origin master
