@@ -26,7 +26,7 @@ export default function Header(props) {
                     <p>{basket.length + spelling}</p>
                     <p>На сумму: {summaryConverted} р.</p>
                 </div>
-                <Link to="/pizzaville/basket">
+                <Link to="/basket">
                     <img src={icon} className="Order-icon" alt="order" />
                 </Link>
                 <ButtonToLog />

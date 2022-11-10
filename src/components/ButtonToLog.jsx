@@ -8,6 +8,6 @@ export default function ButtonToLog() {
     return (
         <button className="button_to_log" onClick = { () => { 
             global.log="";
-            navigate("/pizzaville/auth")}} >Выход</button>
+            navigate("/auth")}} >Выход</button>
     )
 }

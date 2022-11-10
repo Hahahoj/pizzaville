@@ -3,3 +3,22 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.Order::-webkit-scrollbar {
+    background: initial;
+}
+
+.Order::-webkit-scrollbar-button {
+    background: #161516;
+    border: 1px solid #D58C51;
+} 
+
+.Order::-webkit-scrollbar-thumb {
+    background: #161516;
+    border: 1px solid #D58C51;
+    border-radius: 30px;
+}
+
+.Order::-webkit-scrollbar-track-piece {
+    display: none;
+}

@@ -11,3 +11,21 @@
     overflow-y: auto;
     padding: 0 50px 0px 70px;
 }
+
+.Cards::-webkit-scrollbar {
+    background: initial;
+}
+
+.Cards::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.Cards::-webkit-scrollbar-thumb {
+    background: #161516;
+    border: 1px solid #D58C51;
+    border-radius: 30px;
+}
+
+.Cards::-webkit-scrollbar-track-piece {
+    display: none;
+}

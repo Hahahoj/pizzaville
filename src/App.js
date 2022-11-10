@@ -10,11 +10,11 @@ export default function App() {
     return (
         //<ProductsPage />
         <Routes>
-            <Route path="/pizzaville/" element={<StartPage />} />  
-            <Route path="/pizzaville/auth" element={<AuthPage />} />
-            <Route path="/pizzaville/store" element={<ProductsPage />} /> 
-            <Route path="/pizzaville/basket" element = {<BasketPage />} /> 
-            <Route path="/pizzaville/:id" element = {<ItemPage />} /> 
+            <Route path="/" element={<StartPage />} />  
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/store" element={<ProductsPage />} /> 
+            <Route path="/basket" element = {<BasketPage />} /> 
+            <Route path="/:id" element = {<ItemPage />} /> 
             <Route path="*" element = {<NotFound />} /> 
         </Routes>
     );

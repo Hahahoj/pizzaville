@@ -130,7 +130,7 @@ export default function FormAuth() {
                     if (element.password === password) {
                         // залогинились
                         global.log = login;
-                        navigate("/pizzaville/store");
+                        navigate("/store");
                         error=false;
                     }
                 }
