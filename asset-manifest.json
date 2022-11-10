@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pizzaville/static/css/main.fcb1e8de.css",
-    "main.js": "/pizzaville/static/js/main.a1416a9d.js",
+    "main.css": "/pizzaville/static/css/main.4bfdea0c.css",
+    "main.js": "/pizzaville/static/js/main.7421ddda.js",
     "static/media/Auth.png": "/pizzaville/static/media/Auth.36510e5cb68b32ccf0b7.png",
     "static/media/background_fix.png": "/pizzaville/static/media/background_fix.87a2899559b52febf9db.png",
     "static/media/icon.svg": "/pizzaville/static/media/icon.72e035aa7c2acbb899c9f23e2b1122b4.svg",
@@ -11,11 +11,11 @@
     "static/media/icon__add.svg": "/pizzaville/static/media/icon__add.f113ce090add70563b29.svg",
     "static/media/icon__add_hover.svg": "/pizzaville/static/media/icon__add_hover.ac7a21c64985e82186c5.svg",
     "static/media/lineBreak.svg": "/pizzaville/static/media/lineBreak.ef64f783abd9529cb038.svg",
-    "main.fcb1e8de.css.map": "/pizzaville/static/css/main.fcb1e8de.css.map",
-    "main.a1416a9d.js.map": "/pizzaville/static/js/main.a1416a9d.js.map"
+    "main.4bfdea0c.css.map": "/pizzaville/static/css/main.4bfdea0c.css.map",
+    "main.7421ddda.js.map": "/pizzaville/static/js/main.7421ddda.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcb1e8de.css",
-    "static/js/main.a1416a9d.js"
+    "static/css/main.4bfdea0c.css",
+    "static/js/main.7421ddda.js"
   ]
 }
