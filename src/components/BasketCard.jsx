@@ -14,7 +14,7 @@ export default function BasketCard(props) {
     } 
 
     const navigate = useNavigate();
-    console.log("render=",props);
+    //console.log("render=",props);
 
     return (
         

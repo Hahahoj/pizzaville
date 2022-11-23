@@ -34,6 +34,13 @@
     padding: 12px 40px;
     cursor:pointer;
     flex-shrink: 0;
+    transition: background-color 0.5s;
+
+}
+
+.buttonAcceptOrder:hover {
+    cursor:pointer;
+    background: #575757;
 }
 
 .lineBreak {
@@ -41,4 +48,50 @@
     width:1438px;
     height: 1px;
     /* margin-top: 102px; */
+}
+
+.forma-order-title {
+    text-transform: uppercase;
+    margin: 20px 30px 10px 30px;
+    font-size: 25;
+}
+
+.forma-order {
+    padding: 10px 30px 10px;
+    text-align: left;
+}
+
+.forma-order-info {
+    text-transform: uppercase;
+    /* margin: 20px 30px 10px 30px; */
+    font-size: 10px;
+}
+
+.forma-order input {
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #D58C51;
+    padding: 0 40px;
+    box-sizing: border-box;
+    outline-color: #D58C51;
+    outline-width: 0px;
+    font-size: 20px;
+    background-color:#131313;
+    color:#D58C51;
+}
+
+.forma-order-decor {
+    margin: 0 120px;
+    height: 2px;
+    border: 0;
+    background-color: #D58C51;
+}
+
+.forma-order input:last-child {
+    width:50%;
+    padding-left:36px;
+    margin: 10px 0 0 150px;
 }
