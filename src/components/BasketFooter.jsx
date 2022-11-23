@@ -44,7 +44,7 @@ export default function BasketFooter() {
                         <br />
                         <input type="text" name="phone" placeholder="Адрес доставки"/>
                         <hr className="forma-order-decor" />
-                        <input type="submit" value="Отправить" />
+                        <button type="submit" value="Отправить" />
                     </form>                    
                 </Modal>
             </footer>
