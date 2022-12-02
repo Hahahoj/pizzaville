@@ -1,10 +1,21 @@
 import "./BasketFooter.css"
 import { useSelector } from "react-redux";
 import { useState } from "react"; 
+// import { useEffect } from "react";
 import Modal from "./modal/Modal.jsx";
 
 
 export default function BasketFooter() {
+    let uid4=0, dateOrder="", urlInsert = "", orderList = "";
+    let cartPrice=0;
+
+    const basket = useSelector(state => state.basket.basket);
+
+    basket.forEach(element => { 
+        cartPrice=cartPrice+(+element.cardPrice)
+    });
+    let summaryConverted = cartPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
 
     // генератор уникального номера
     function uid() {
@@ -15,12 +26,18 @@ export default function BasketFooter() {
 
     const [show, setShow] = useState (false);
 
-    const basket = useSelector(state => state.basket.basket);
-    let cartPrice=0;
+    let onShow = () => {
+        setShow(true);
+    };
+
+    uid4 = uid().substring(0,4);
+    dateOrder = new Date().toLocaleString();
+    urlInsert = urlInsert+"id="+String(uid4)+"&date="+dateOrder+"&sum="+String(cartPrice);
+
     basket.forEach(element => { 
-        cartPrice=cartPrice+(+element.cardPrice)
+        urlInsert = urlInsert+"&lot="+String(element.productID);
+        orderList = orderList + String(element.productID) + ",";
     });
-    let summaryConverted = cartPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
     return (
         <>
@@ -32,19 +49,23 @@ export default function BasketFooter() {
                 <div className = "footerSum">
                     {summaryConverted} ₽
                 </div>
-                <button className = "buttonAcceptOrder" onClick={() => setShow(true)}>Оформить заказ</button>
-                <Modal onClose = {()=> setShow(false)} show={show} summary={cartPrice} title={`Заказ: ${uid().substring(0,4)} от ${new Date().toLocaleString()} на сумму: ${summaryConverted} ₽`}>
+                <button className = "buttonAcceptOrder" onClick={() => onShow(true)}>Оформить заказ</button>
+                <Modal onClose = {()=> setShow(false)} show={show} summary={cartPrice} urlInsert={urlInsert} title={`Заказ: ${uid4} от ${dateOrder} на сумму: ${summaryConverted} ₽`}>
                     <div className="forma-order-title">Введите контактные данные и адрес доставки:</div>
-                    <div className="forma-order-info">(Менеджер перезвонит вам для уточнения заказа)</div>
+                    <div className="forma-order-info">(Менеджер перезвонит вам для уточнения деталей заказа)</div>
 
-                    <form className="forma-order">
+                    <form className="forma-order" action={`/order.php`} method="get">
                         <input type="text" name="name" placeholder="Ваше имя"/>
                         <br />
-                        <input type="text" name="adress" placeholder="Ваш телефон"/>
+                        <input type="text" name="phone" placeholder="Ваш телефон"/>
                         <br />
-                        <input type="text" name="phone" placeholder="Адрес доставки"/>
+                        <input type="text" name="adress" placeholder="Адрес доставки"/>
+                        <input type="hidden" name="orderid" value = {uid4} />
+                        <input type="hidden" name="date" value = {dateOrder} />
+                        <input type="hidden" name="price" value = {cartPrice} />
+                        <input type="hidden" name="orderbody" value = {orderList} />
                         <hr className="forma-order-decor" />
-                        <button type="submit" value="Отправить" />
+                        <input type="submit" value="Отправить" />
                     </form>                    
                 </Modal>
             </footer>

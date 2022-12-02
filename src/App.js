@@ -5,12 +5,14 @@ import ItemPage from './Pages/ItemPage';
 import AuthPage from './Pages/AuthPage';
 import StartPage from './Pages/StartPage';
 import NotFound from './Pages/NotFound';
+import Order from './Pages/Order';
 
 export default function App() {
     return (
         //<ProductsPage />
         <Routes>
             <Route path="/" element={<StartPage />} />  
+            <Route path="/order" element = {<Order />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/store" element={<ProductsPage />} /> 
             <Route path="/basket" element = {<BasketPage />} /> 

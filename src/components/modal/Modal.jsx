@@ -1,6 +1,6 @@
 import "./Modal.css"
 
-export default function Modal({onClose, show, summary, title, children }) {
+export default function Modal({onClose, show, summary, urlInsert, title, children }) {
 
     if ((!show)||(summary===0)) { return null;}
 
